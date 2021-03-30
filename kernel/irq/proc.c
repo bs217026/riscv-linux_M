@@ -549,7 +549,7 @@ int show_interrupts(struct seq_file *p, void *v)
 	if ((!action || irq_desc_is_chained(desc)) && !any_count)
 		goto out;
 
-	seq_printf(p, "%*d: ", prec, i);
+	seq_printf(p, "%*d:: ", prec-1, i);
 	for_each_online_cpu(j)
 		seq_printf(p, "%10u ", kstat_irqs_cpu(i, j));
 
