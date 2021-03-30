@@ -528,7 +528,7 @@ int show_interrupts(struct seq_file *p, void *v)
 
 	/* print header and calculate the width of the first column */
 	if (i == 0) {
-		for (prec = 3, j = 1000; prec < 10 && j <= nr_irqs; ++prec)
+		for (prec = 2, j = 1000; prec < 10 && j <= nr_irqs; ++prec)
 			j *= 10;
 
 		seq_printf(p, "%*s", prec + 8, "");
