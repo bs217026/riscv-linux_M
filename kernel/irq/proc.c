@@ -327,7 +327,7 @@ static const struct file_operations irq_node_proc_fops = {
 };
 #endif
 
-static int irq_spurious_proc_show_aaa(struct seq_file *m, void *v)
+static int irq_spurious_proc_show(struct seq_file *m, void *v)
 {
 	struct irq_desc *desc = irq_to_desc((long) m->private);
 
